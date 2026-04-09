@@ -46,6 +46,7 @@ namespace BurgerKiosk
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.grpMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHamburger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBulgogi)).BeginInit();
@@ -253,18 +254,29 @@ namespace BurgerKiosk
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             //
+            // lblError - 에러 메시지 라벨
+            //
+            this.lblError.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(340, 640);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(320, 25);
+            this.lblError.Text = "";
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            //
             // Form1
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(884, 651);
+            this.ClientSize = new System.Drawing.Size(884, 681);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.grpOptions);
             this.Controls.Add(this.grpOrder);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.lblError);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -299,5 +311,6 @@ namespace BurgerKiosk
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label lblError;
     }
 }

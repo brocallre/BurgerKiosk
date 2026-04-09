@@ -74,6 +74,16 @@ namespace BurgerKiosk
         // 주문하기 버튼 클릭
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            // 메뉴 미선택 시 에러 메시지 표시
+            if (!rbHamburger.Checked && !rbBulgogi.Checked && !rbChicken.Checked)
+            {
+                lblError.Text = "메뉴를 선택해주세요.";
+                return;
+            }
+
+            // 에러 메시지 초기화
+            lblError.Text = "";
+
             lstOrder.Items.Clear();
             int totalPrice = 0;
 
@@ -134,9 +144,10 @@ namespace BurgerKiosk
             chkCheese.Checked = false;
             chkSauce.Checked = false;
 
-            // 주문 내역 초기화
+            // 주문 내역 및 에러 메시지 초기화
             lstOrder.Items.Clear();
             lblTotal.Text = "총 금액 : 0원";
+            lblError.Text = "";
         }
     }
 }
