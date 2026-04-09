@@ -151,5 +151,26 @@ namespace BurgerKiosk
         {
 
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            // 라디오버튼 그룹 내 Tab 키 이동을 지원하기 위한 커스텀 처리 (윈도우 기본은 방향키)
+            if (keyData == Keys.Tab)
+            {
+                if (grpMenu.Focused) { rbHamburger.Focus(); return true; }
+                if (rbHamburger.Focused) { rbBulgogi.Focus(); return true; }
+                if (rbBulgogi.Focused) { rbChicken.Focus(); return true; }
+                if (rbChicken.Focused) { chkFries.Focus(); return true; }
+                if (grpOptions.Focused) { chkFries.Focus(); return true; }
+            }
+            else if (keyData == (Keys.Shift | Keys.Tab))
+            {
+                if (chkFries.Focused) { rbChicken.Focus(); return true; }
+                if (rbChicken.Focused) { rbBulgogi.Focus(); return true; }
+                if (rbBulgogi.Focused) { rbHamburger.Focus(); return true; }
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }
