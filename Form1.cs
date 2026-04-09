@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,48 +27,6 @@ namespace BurgerKiosk
         public Form1()
         {
             InitializeComponent();
-            LoadBurgerImages();
-        }
-
-        // 버거 이미지를 로드하거나 없으면 플레이스홀더 생성
-        private void LoadBurgerImages()
-        {
-            string imgPath = Path.Combine(Application.StartupPath, "img");
-
-            // img 폴더가 없으면 생성
-            if (!Directory.Exists(imgPath))
-            {
-                Directory.CreateDirectory(imgPath);
-            }
-
-            // 각 버거 이미지 로드 또는 플레이스홀더 생성
-            picHamburger.Image = LoadOrCreateImage(Path.Combine(imgPath, "hamburger.png"), "햄버거", Color.SandyBrown);
-            picBulgogi.Image = LoadOrCreateImage(Path.Combine(imgPath, "bulgogi.png"), "불고기버거", Color.SaddleBrown);
-            picChicken.Image = LoadOrCreateImage(Path.Combine(imgPath, "chicken.png"), "치킨버거", Color.Goldenrod);
-        }
-
-        // 이미지 파일이 있으면 로드, 없으면 플레이스홀더 이미지 생성
-        private Image LoadOrCreateImage(string filePath, string text, Color bgColor)
-        {
-            if (File.Exists(filePath))
-            {
-                return Image.FromFile(filePath);
-            }
-
-            // 플레이스홀더 이미지 생성
-            Bitmap bmp = new Bitmap(200, 150);
-            using (Graphics g = Graphics.FromImage(bmp))
-            {
-                g.Clear(bgColor);
-                using (Font font = new Font("맑은 고딕", 14F, FontStyle.Bold))
-                using (StringFormat sf = new StringFormat())
-                {
-                    sf.Alignment = StringAlignment.Center;
-                    sf.LineAlignment = StringAlignment.Center;
-                    g.DrawString(text, font, Brushes.White, new RectangleF(0, 0, 200, 150), sf);
-                }
-            }
-            return bmp;
         }
 
         // 선택 변경 시 실시간 주문 내역 업데이트
