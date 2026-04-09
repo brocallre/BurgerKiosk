@@ -78,7 +78,7 @@ namespace BurgerKiosk
             this.grpMenu.Name = "grpMenu";
             this.grpMenu.Size = new System.Drawing.Size(300, 490);
             this.grpMenu.TabIndex = 0;
-            this.grpMenu.TabStop = false;
+            this.grpMenu.TabStop = true;
             this.grpMenu.Text = "메뉴 선택";
             //
             // rbHamburger - 햄버거 라디오버튼
@@ -150,7 +150,7 @@ namespace BurgerKiosk
             this.grpOptions.Name = "grpOptions";
             this.grpOptions.Size = new System.Drawing.Size(200, 230);
             this.grpOptions.TabIndex = 1;
-            this.grpOptions.TabStop = false;
+            this.grpOptions.TabStop = true;
             this.grpOptions.Text = "추가 옵션";
             //
             // chkFries - 감자튀김 체크박스
@@ -277,6 +277,7 @@ namespace BurgerKiosk
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblError);
+            this.AcceptButton = this.btnOrder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
