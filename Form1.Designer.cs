@@ -28,13 +28,14 @@ namespace BurgerKiosk
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpMenu = new System.Windows.Forms.GroupBox();
             this.rbHamburger = new System.Windows.Forms.RadioButton();
-            this.rbBulgogi = new System.Windows.Forms.RadioButton();
-            this.rbChicken = new System.Windows.Forms.RadioButton();
             this.picHamburger = new System.Windows.Forms.PictureBox();
+            this.rbBulgogi = new System.Windows.Forms.RadioButton();
             this.picBulgogi = new System.Windows.Forms.PictureBox();
+            this.rbChicken = new System.Windows.Forms.RadioButton();
             this.picChicken = new System.Windows.Forms.PictureBox();
             this.grpOptions = new System.Windows.Forms.GroupBox();
             this.chkFries = new System.Windows.Forms.CheckBox();
@@ -54,18 +55,20 @@ namespace BurgerKiosk
             this.grpOptions.SuspendLayout();
             this.grpOrder.SuspendLayout();
             this.SuspendLayout();
-            //
-            // lblTitle - 제목 라벨
-            //
+            // 
+            // lblTitle
+            // 
             this.lblTitle.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Blue;
-            this.lblTitle.Location = new System.Drawing.Point(15, 8);
+            this.lblTitle.Location = new System.Drawing.Point(39, 20);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(280, 35);
+            this.lblTitle.Size = new System.Drawing.Size(720, 88);
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "버거 주문 키오스크";
-            //
-            // grpMenu - 메뉴 선택 그룹
-            //
+            // 
+            // grpMenu
+            // 
             this.grpMenu.Controls.Add(this.rbHamburger);
             this.grpMenu.Controls.Add(this.picHamburger);
             this.grpMenu.Controls.Add(this.rbBulgogi);
@@ -74,209 +77,238 @@ namespace BurgerKiosk
             this.grpMenu.Controls.Add(this.picChicken);
             this.grpMenu.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.grpMenu.ForeColor = System.Drawing.Color.Red;
-            this.grpMenu.Location = new System.Drawing.Point(15, 48);
+            this.grpMenu.Location = new System.Drawing.Point(39, 120);
+            this.grpMenu.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.grpMenu.Name = "grpMenu";
-            this.grpMenu.Size = new System.Drawing.Size(240, 355);
+            this.grpMenu.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.grpMenu.Size = new System.Drawing.Size(617, 888);
             this.grpMenu.TabIndex = 0;
-            this.grpMenu.TabStop = true;
             this.grpMenu.Text = "메뉴 선택";
-            //
-            // rbHamburger - 햄버거 라디오버튼
-            //
+            // 
+            // rbHamburger
+            // 
             this.rbHamburger.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.rbHamburger.ForeColor = System.Drawing.Color.Black;
-            this.rbHamburger.Location = new System.Drawing.Point(12, 28);
+            this.rbHamburger.Location = new System.Drawing.Point(31, 70);
+            this.rbHamburger.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.rbHamburger.Name = "rbHamburger";
-            this.rbHamburger.Size = new System.Drawing.Size(100, 22);
+            this.rbHamburger.Size = new System.Drawing.Size(257, 55);
             this.rbHamburger.TabIndex = 0;
             this.rbHamburger.Text = "햄버거";
             this.rbHamburger.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // picHamburger - 햄버거 이미지
-            //
+            // 
+            // picHamburger
+            // 
             this.picHamburger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picHamburger.Location = new System.Drawing.Point(115, 22);
+            this.picHamburger.Image = ((System.Drawing.Image)(resources.GetObject("picHamburger.Image")));
+            this.picHamburger.Location = new System.Drawing.Point(296, 55);
+            this.picHamburger.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.picHamburger.Name = "picHamburger";
-            this.picHamburger.Size = new System.Drawing.Size(110, 85);
+            this.picHamburger.Size = new System.Drawing.Size(280, 210);
             this.picHamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHamburger.TabIndex = 1;
             this.picHamburger.TabStop = false;
-            //
-            // rbBulgogi - 불고기버거 라디오버튼
-            //
+            this.picHamburger.Click += new System.EventHandler(this.picHamburger_Click);
+            // 
+            // rbBulgogi
+            // 
             this.rbBulgogi.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.rbBulgogi.ForeColor = System.Drawing.Color.Black;
-            this.rbBulgogi.Location = new System.Drawing.Point(12, 138);
+            this.rbBulgogi.Location = new System.Drawing.Point(31, 345);
+            this.rbBulgogi.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.rbBulgogi.Name = "rbBulgogi";
-            this.rbBulgogi.Size = new System.Drawing.Size(105, 22);
+            this.rbBulgogi.Size = new System.Drawing.Size(230, 55);
             this.rbBulgogi.TabIndex = 1;
             this.rbBulgogi.Text = "불고기버거";
             this.rbBulgogi.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // picBulgogi - 불고기버거 이미지
-            //
+            // 
+            // picBulgogi
+            // 
             this.picBulgogi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBulgogi.Location = new System.Drawing.Point(115, 128);
+            this.picBulgogi.Image = ((System.Drawing.Image)(resources.GetObject("picBulgogi.Image")));
+            this.picBulgogi.Location = new System.Drawing.Point(296, 320);
+            this.picBulgogi.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.picBulgogi.Name = "picBulgogi";
-            this.picBulgogi.Size = new System.Drawing.Size(110, 85);
+            this.picBulgogi.Size = new System.Drawing.Size(280, 210);
             this.picBulgogi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBulgogi.TabIndex = 2;
             this.picBulgogi.TabStop = false;
-            //
-            // rbChicken - 치킨버거 라디오버튼
-            //
+            // 
+            // rbChicken
+            // 
             this.rbChicken.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.rbChicken.ForeColor = System.Drawing.Color.Black;
-            this.rbChicken.Location = new System.Drawing.Point(12, 248);
+            this.rbChicken.Location = new System.Drawing.Point(31, 620);
+            this.rbChicken.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.rbChicken.Name = "rbChicken";
-            this.rbChicken.Size = new System.Drawing.Size(100, 22);
+            this.rbChicken.Size = new System.Drawing.Size(257, 55);
             this.rbChicken.TabIndex = 2;
             this.rbChicken.Text = "치킨버거";
             this.rbChicken.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // picChicken - 치킨버거 이미지
-            //
+            // 
+            // picChicken
+            // 
             this.picChicken.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picChicken.Location = new System.Drawing.Point(115, 238);
+            this.picChicken.Image = ((System.Drawing.Image)(resources.GetObject("picChicken.Image")));
+            this.picChicken.Location = new System.Drawing.Point(296, 595);
+            this.picChicken.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.picChicken.Name = "picChicken";
-            this.picChicken.Size = new System.Drawing.Size(110, 85);
+            this.picChicken.Size = new System.Drawing.Size(280, 210);
             this.picChicken.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picChicken.TabIndex = 3;
             this.picChicken.TabStop = false;
-            //
-            // grpOptions - 추가 옵션 그룹
-            //
+            // 
+            // grpOptions
+            // 
             this.grpOptions.Controls.Add(this.chkFries);
             this.grpOptions.Controls.Add(this.chkCola);
             this.grpOptions.Controls.Add(this.chkCheese);
             this.grpOptions.Controls.Add(this.chkSauce);
             this.grpOptions.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.grpOptions.ForeColor = System.Drawing.Color.Red;
-            this.grpOptions.Location = new System.Drawing.Point(270, 48);
+            this.grpOptions.Location = new System.Drawing.Point(694, 120);
+            this.grpOptions.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.grpOptions.Name = "grpOptions";
-            this.grpOptions.Size = new System.Drawing.Size(160, 180);
+            this.grpOptions.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.grpOptions.Size = new System.Drawing.Size(411, 450);
             this.grpOptions.TabIndex = 1;
-            this.grpOptions.TabStop = true;
             this.grpOptions.Text = "추가 옵션";
-            //
-            // chkFries - 감자튀김 체크박스
-            //
+            // 
+            // chkFries
+            // 
             this.chkFries.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.chkFries.ForeColor = System.Drawing.Color.Black;
-            this.chkFries.Location = new System.Drawing.Point(15, 32);
+            this.chkFries.Location = new System.Drawing.Point(39, 80);
+            this.chkFries.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.chkFries.Name = "chkFries";
-            this.chkFries.Size = new System.Drawing.Size(130, 22);
+            this.chkFries.Size = new System.Drawing.Size(334, 55);
             this.chkFries.TabIndex = 0;
             this.chkFries.Text = "감자튀김";
             this.chkFries.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // chkCola - 콜라 체크박스
-            //
+            // 
+            // chkCola
+            // 
             this.chkCola.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.chkCola.ForeColor = System.Drawing.Color.Black;
-            this.chkCola.Location = new System.Drawing.Point(15, 67);
+            this.chkCola.Location = new System.Drawing.Point(39, 168);
+            this.chkCola.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.chkCola.Name = "chkCola";
-            this.chkCola.Size = new System.Drawing.Size(130, 22);
+            this.chkCola.Size = new System.Drawing.Size(334, 55);
             this.chkCola.TabIndex = 1;
             this.chkCola.Text = "콜라";
             this.chkCola.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // chkCheese - 치즈 추가 체크박스
-            //
+            // 
+            // chkCheese
+            // 
             this.chkCheese.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.chkCheese.ForeColor = System.Drawing.Color.Black;
-            this.chkCheese.Location = new System.Drawing.Point(15, 102);
+            this.chkCheese.Location = new System.Drawing.Point(39, 255);
+            this.chkCheese.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.chkCheese.Name = "chkCheese";
-            this.chkCheese.Size = new System.Drawing.Size(130, 22);
+            this.chkCheese.Size = new System.Drawing.Size(334, 55);
             this.chkCheese.TabIndex = 2;
             this.chkCheese.Text = "치즈 추가";
             this.chkCheese.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // chkSauce - 소스 추가 체크박스
-            //
+            // 
+            // chkSauce
+            // 
             this.chkSauce.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.chkSauce.ForeColor = System.Drawing.Color.Black;
-            this.chkSauce.Location = new System.Drawing.Point(15, 137);
+            this.chkSauce.Location = new System.Drawing.Point(39, 342);
+            this.chkSauce.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.chkSauce.Name = "chkSauce";
-            this.chkSauce.Size = new System.Drawing.Size(130, 22);
+            this.chkSauce.Size = new System.Drawing.Size(334, 55);
             this.chkSauce.TabIndex = 3;
             this.chkSauce.Text = "소스 추가";
             this.chkSauce.CheckedChanged += new System.EventHandler(this.SelectionChanged);
-            //
-            // grpOrder - 주문 내역 그룹
-            //
+            // 
+            // grpOrder
+            // 
             this.grpOrder.Controls.Add(this.lstOrder);
             this.grpOrder.Controls.Add(this.lblTotal);
             this.grpOrder.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.grpOrder.ForeColor = System.Drawing.Color.Red;
-            this.grpOrder.Location = new System.Drawing.Point(445, 48);
+            this.grpOrder.Location = new System.Drawing.Point(1144, 120);
+            this.grpOrder.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.grpOrder.Name = "grpOrder";
-            this.grpOrder.Size = new System.Drawing.Size(240, 355);
+            this.grpOrder.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.grpOrder.Size = new System.Drawing.Size(617, 888);
             this.grpOrder.TabIndex = 2;
             this.grpOrder.TabStop = false;
             this.grpOrder.Text = "주문 내역";
-            //
-            // lstOrder - 주문 내역 리스트박스
-            //
+            // 
+            // lstOrder
+            // 
             this.lstOrder.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.lstOrder.FormattingEnabled = true;
-            this.lstOrder.ItemHeight = 17;
-            this.lstOrder.Location = new System.Drawing.Point(12, 28);
+            this.lstOrder.ItemHeight = 45;
+            this.lstOrder.Location = new System.Drawing.Point(31, 70);
+            this.lstOrder.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.lstOrder.Name = "lstOrder";
-            this.lstOrder.Size = new System.Drawing.Size(215, 276);
+            this.lstOrder.Size = new System.Drawing.Size(547, 679);
             this.lstOrder.TabIndex = 0;
-            //
-            // lblTotal - 총 금액 라벨
-            //
+            this.lstOrder.SelectedIndexChanged += new System.EventHandler(this.lstOrder_SelectedIndexChanged);
+            // 
+            // lblTotal
+            // 
             this.lblTotal.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.Red;
-            this.lblTotal.Location = new System.Drawing.Point(12, 318);
+            this.lblTotal.Location = new System.Drawing.Point(31, 795);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(215, 25);
+            this.lblTotal.Size = new System.Drawing.Size(553, 62);
+            this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "총 금액 : 0원";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            //
-            // btnOrder - 주문하기 버튼
-            //
+            // 
+            // btnOrder
+            // 
             this.btnOrder.BackColor = System.Drawing.Color.Green;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(270, 418);
+            this.btnOrder.Location = new System.Drawing.Point(694, 1045);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(130, 40);
+            this.btnOrder.Size = new System.Drawing.Size(334, 100);
             this.btnOrder.TabIndex = 3;
             this.btnOrder.Text = "주문하기";
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            //
-            // btnReset - 초기화 버튼
-            //
-            this.btnReset.BackColor = System.Drawing.Color.Green;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Red;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold);
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(415, 418);
+            this.btnReset.Location = new System.Drawing.Point(1067, 1045);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(130, 40);
+            this.btnReset.Size = new System.Drawing.Size(334, 100);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "초기화";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            //
-            // lblError - 에러 메시지 라벨
-            //
+            // 
+            // lblError
+            // 
             this.lblError.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(270, 462);
+            this.lblError.Location = new System.Drawing.Point(694, 1155);
+            this.lblError.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(275, 22);
-            this.lblError.Text = "";
+            this.lblError.Size = new System.Drawing.Size(707, 55);
+            this.lblError.TabIndex = 5;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //
+            // 
             // Form1
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            // 
+            this.AcceptButton = this.btnOrder;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 495);
+            this.ClientSize = new System.Drawing.Size(1800, 1238);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grpMenu);
             this.Controls.Add(this.grpOptions);
@@ -284,12 +316,13 @@ namespace BurgerKiosk
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblError);
-            this.AcceptButton = this.btnOrder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Burger Kiosk v1.0";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.grpMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHamburger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBulgogi)).EndInit();
@@ -297,6 +330,7 @@ namespace BurgerKiosk
             this.grpOptions.ResumeLayout(false);
             this.grpOrder.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

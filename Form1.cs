@@ -168,5 +168,20 @@ namespace BurgerKiosk
             lblTotal.Text = "총 금액 : 0원";
             lblError.Text = "";
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picHamburger_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
