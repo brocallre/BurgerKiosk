@@ -90,6 +90,7 @@ namespace BurgerKiosk
             this.rbHamburger.Size = new System.Drawing.Size(120, 28);
             this.rbHamburger.TabIndex = 0;
             this.rbHamburger.Text = "햄버거";
+            this.rbHamburger.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // picHamburger - 햄버거 이미지
             //
@@ -109,6 +110,7 @@ namespace BurgerKiosk
             this.rbBulgogi.Size = new System.Drawing.Size(130, 28);
             this.rbBulgogi.TabIndex = 1;
             this.rbBulgogi.Text = "불고기버거";
+            this.rbBulgogi.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // picBulgogi - 불고기버거 이미지
             //
@@ -128,6 +130,7 @@ namespace BurgerKiosk
             this.rbChicken.Size = new System.Drawing.Size(120, 28);
             this.rbChicken.TabIndex = 2;
             this.rbChicken.Text = "치킨버거";
+            this.rbChicken.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // picChicken - 치킨버거 이미지
             //
@@ -162,6 +165,7 @@ namespace BurgerKiosk
             this.chkFries.Size = new System.Drawing.Size(160, 28);
             this.chkFries.TabIndex = 0;
             this.chkFries.Text = "감자튀김";
+            this.chkFries.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // chkCola - 콜라 체크박스
             //
@@ -172,6 +176,7 @@ namespace BurgerKiosk
             this.chkCola.Size = new System.Drawing.Size(160, 28);
             this.chkCola.TabIndex = 1;
             this.chkCola.Text = "콜라";
+            this.chkCola.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // chkCheese - 치즈 추가 체크박스
             //
@@ -182,6 +187,7 @@ namespace BurgerKiosk
             this.chkCheese.Size = new System.Drawing.Size(160, 28);
             this.chkCheese.TabIndex = 2;
             this.chkCheese.Text = "치즈 추가";
+            this.chkCheese.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // chkSauce - 소스 추가 체크박스
             //
@@ -192,6 +198,7 @@ namespace BurgerKiosk
             this.chkSauce.Size = new System.Drawing.Size(160, 28);
             this.chkSauce.TabIndex = 3;
             this.chkSauce.Text = "소스 추가";
+            this.chkSauce.CheckedChanged += new System.EventHandler(this.SelectionChanged);
             //
             // grpOrder - 주문 내역 그룹
             //

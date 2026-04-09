@@ -71,19 +71,15 @@ namespace BurgerKiosk
             return bmp;
         }
 
-        // 주문하기 버튼 클릭
-        private void btnOrder_Click(object sender, EventArgs e)
+        // 선택 변경 시 실시간 주문 내역 업데이트
+        private void SelectionChanged(object sender, EventArgs e)
         {
-            // 메뉴 미선택 시 에러 메시지 표시
-            if (!rbHamburger.Checked && !rbBulgogi.Checked && !rbChicken.Checked)
-            {
-                lblError.Text = "메뉴를 선택해주세요.";
-                return;
-            }
+            UpdateOrderDisplay();
+        }
 
-            // 에러 메시지 초기화
-            lblError.Text = "";
-
+        // 주문 내역 및 총 금액을 실시간으로 갱신
+        private void UpdateOrderDisplay()
+        {
             lstOrder.Items.Clear();
             int totalPrice = 0;
 
@@ -128,6 +124,29 @@ namespace BurgerKiosk
 
             // 총 금액 표시
             lblTotal.Text = "총 금액 : " + totalPrice.ToString("N0") + "원";
+
+            // 메뉴가 선택되면 에러 메시지 초기화
+            if (rbHamburger.Checked || rbBulgogi.Checked || rbChicken.Checked)
+            {
+                lblError.Text = "";
+            }
+        }
+
+        // 주문하기 버튼 클릭
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            // 메뉴 미선택 시 에러 메시지 표시
+            if (!rbHamburger.Checked && !rbBulgogi.Checked && !rbChicken.Checked)
+            {
+                lblError.Text = "메뉴를 선택해주세요.";
+                return;
+            }
+
+            // 에러 메시지 초기화
+            lblError.Text = "";
+
+            // 주문 내역 갱신
+            UpdateOrderDisplay();
         }
 
         // 초기화 버튼 클릭
