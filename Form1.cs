@@ -141,5 +141,15 @@ namespace BurgerKiosk
         {
 
         }
+
+        private void lblError_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

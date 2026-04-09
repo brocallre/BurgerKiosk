@@ -80,7 +80,6 @@ namespace BurgerKiosk
             this.grpMenu.Name = "grpMenu";
             this.grpMenu.Size = new System.Drawing.Size(575, 700);
             this.grpMenu.TabIndex = 0;
-            this.grpMenu.TabStop = true;
             this.grpMenu.Text = "메뉴 선택";
             // 
             // rbHamburger
@@ -162,7 +161,6 @@ namespace BurgerKiosk
             this.grpOptions.Name = "grpOptions";
             this.grpOptions.Size = new System.Drawing.Size(380, 430);
             this.grpOptions.TabIndex = 1;
-            this.grpOptions.TabStop = true;
             this.grpOptions.Text = "추가 옵션";
             // 
             // chkFries
@@ -227,9 +225,9 @@ namespace BurgerKiosk
             this.lstOrder.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.lstOrder.FormattingEnabled = true;
             this.lstOrder.ItemHeight = 45;
-            this.lstOrder.Location = new System.Drawing.Point(15, 45);
+            this.lstOrder.Location = new System.Drawing.Point(15, 40);
             this.lstOrder.Name = "lstOrder";
-            this.lstOrder.Size = new System.Drawing.Size(470, 500);
+            this.lstOrder.Size = new System.Drawing.Size(470, 499);
             this.lstOrder.TabIndex = 0;
             this.lstOrder.SelectedIndexChanged += new System.EventHandler(this.lstOrder_SelectedIndexChanged);
             // 
@@ -243,6 +241,7 @@ namespace BurgerKiosk
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "총 금액 : 0원";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // btnOrder
             // 
@@ -280,8 +279,8 @@ namespace BurgerKiosk
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(570, 35);
             this.lblError.TabIndex = 5;
-            this.lblError.Text = "";
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblError.Click += new System.EventHandler(this.lblError_Click);
             // 
             // Form1
             // 
